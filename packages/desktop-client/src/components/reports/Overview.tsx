@@ -29,7 +29,6 @@ import { CustomReportListCards } from './reports/CustomReportListCards';
 import { MarkdownCard } from './reports/MarkdownCard';
 import { NetWorthCard } from './reports/NetWorthCard';
 import { SpendingCard } from './reports/SpendingCard';
-import './overview.scss';
 import { SummaryCard } from './reports/SummaryCard';
 
 import { MOBILE_NAV_HEIGHT } from '@desktop-client/components/mobile/MobileNavTabs';
