@@ -47,11 +47,14 @@ We have a wide range of documentation on how to use Actual, this is all availabl
 
 Actual is a community driven product. Learn more about [contributing to Actual](https://actualbudget.org/docs/contributing/).
 
+The interface uses a Tailwind CSS-based component library. Styling changes should rely on Tailwind utility classes rather than custom CSS files. See `CONTRIBUTING.md` for details on code style and import conventions.
+
 ### Code structure
 
 The Actual app is split up into a few packages:
 
 - loot-core - The core application that runs on any platform
+- component-library - Shared UI components built with Tailwind CSS
 - desktop-client - The desktop UI
 - desktop-electron - The desktop app
 

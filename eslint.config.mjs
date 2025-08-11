@@ -7,6 +7,7 @@ import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginTypescript from 'typescript-eslint';
 import pluginTypescriptPaths from 'eslint-plugin-typescript-paths';
 import pluginActual from './packages/eslint-plugin-actual/lib/index.js';
+import pluginTailwind from 'eslint-plugin-tailwindcss';
 
 import tsParser from '@typescript-eslint/parser';
 
@@ -491,7 +492,7 @@ export default pluginTypescript.config(
       ],
 
       'no-restricted-imports': [
-        'warn',
+        'error',
         {
           paths: [
             {
@@ -537,6 +538,10 @@ export default pluginTypescript.config(
             {
               group: ['@actual-app/web/*'],
               message: 'Please do not import `@actual-app/web` in `loot-core`',
+            },
+            {
+              group: ['../*'],
+              message: 'Use project aliases instead of parent relative imports',
             },
           ],
         },
@@ -708,7 +713,12 @@ export default pluginTypescript.config(
     },
   },
 
-  {},
+  {
+    plugins: { tailwindcss: pluginTailwind },
+    rules: {
+      'tailwindcss/no-custom-classname': 'error',
+    },
+  },
   {
     // TODO: fix the issues in these files
     files: [

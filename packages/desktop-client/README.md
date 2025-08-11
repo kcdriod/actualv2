@@ -1,5 +1,9 @@
 Actual on the web
 
+The desktop client now relies on the Tailwind CSS based component library in
+`packages/component-library`. Avoid adding standalone CSS files and prefer
+Tailwind utility classes and shared components.
+
 ## E2E tests
 
 E2E (end-to-end) tests use [Playwright](https://playwright.dev/). Running them requires an Actual server to be running either locally or on a remote server.
